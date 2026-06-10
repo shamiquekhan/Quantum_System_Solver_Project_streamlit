@@ -1,47 +1,67 @@
-# Quantum Particle in a Box (PIAB) Explorer 🔬
+# ⚛️ 1D Quantum System Solver and Visualizer
 
-A comprehensive interactive tool for understanding quantum mechanics through the 1D particle in a box model.
+---
 
-## Features
+## 📋 Project Information
 
-✨ **Interactive Visualizations:**
-- Wave function and probability density plots
-- Energy level diagrams
-- Time evolution animations
-- HOMO-LUMO molecular orbital analysis
+### **Course Details**
+- **Subject**: Introduction to Computational Chemistry
+- **Professor**: Dr. Saurav Prasad
+- **Institution**: Vellore Institute of Technology (VIT Bhopal)
+- **Semester**: Fall Semester 2025
 
-📊 **Quantum Calculations:**
-- Energy eigenvalues and wave functions
-- Probability in spatial regions
-- Expectation values (position, momentum, energy)
-- Heisenberg Uncertainty Principle verification
+### **Student Contributors**
+- **Shamique Khan** (Reg No. 25BAI10187)
+- **Prachi Kamboj** (Reg No. 25BAI10874)
+- **Prashant Singh** (Reg No. 25BAI10980)
 
-🧪 **Real-World Applications:**
-- Conjugated molecular orbital theory
-- UV-Vis spectroscopy predictions
-- β-Carotene color analysis (why carrots are orange!)
+---
 
-📥 **Data Export:**
-- Export quantum state data as CSV, JSON, or TXT
-- Download and analyze in your favorite tools
+## 🚀 Online Demo
 
-## Online Demo
-
-🚀 **Try it live on Streamlit Community Cloud:**
+✨ **Try the interactive app live on Streamlit Community Cloud:**
 [Quantum PIAB Explorer](https://quantum-piab-explorer.streamlit.app)
 
-## Local Installation
+---
 
-### Prerequisites
-- Python 3.8+
-- pip
+## 🎯 Overview
 
-### Quick Start
+This project implements a **complete computational solution** for solving and visualizing the **1D Particle in a Box (PIAB)** quantum system. It bridges the gap between abstract quantum mechanics theory and practical computational chemistry applications, demonstrating how quantum confinement affects molecular electronic structure and spectroscopic properties.
+
+### **Key Innovation**
+Connects theoretical quantum mechanics to real-world chemistry by modeling π-electron behavior in conjugated organic molecules and predicting UV-Vis absorption spectra.
+
+---
+
+## 🌟 Features
+
+### **Interactive Streamlit App**
+- **Wave function and probability density plots**
+- **Energy level diagrams**
+- **Time evolution animations**
+- **HOMO-LUMO molecular orbital analysis**
+- **Data Export:** Export calculated data as CSV, JSON, or TXT
+
+### **Core Quantum Mechanics Features**
+1. **Energy Eigenvalue Calculator:** E_n = n² × π²ℏ²/(2mL²)
+2. **Wave Function Solver:** ψ_n(x) = √(2/L) × sin(nπx/L)
+3. **Probability Density Analysis:** |ψ_n(x)|² with normalization verification
+4. **Regional Probability Calculation:** Numerical integration for P(x₁ ≤ x ≤ x₂)
+5. **Expectation Values & Uncertainties:** Verification of Heisenberg Uncertainty Principle (Δx·Δp ≥ ℏ/2)
+6. **Time Evolution:** Stationary states and superposition dynamics
+7. **Molecular Orbital Connection:** π-electrons in conjugated molecules (Ethylene, β-Carotene, etc.)
+8. **HOMO-LUMO Spectroscopy:** Predicted absorption wavelengths and color analysis
+
+---
+
+## 🔧 Installation & Setup
+
+### **Local Installation**
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/quantum-piab-explorer.git
-cd quantum-piab-explorer
+git clone https://github.com/shamiquekhan/Quantum_System_Solver_Project_streamlit.git
+cd Quantum_System_Solver_Project_streamlit
 ```
 
 2. **Install dependencies:**
@@ -49,204 +69,55 @@ cd quantum-piab-explorer
 pip install -r requirements.txt
 ```
 
-3. **Run the app:**
+3. **Run the Streamlit app:**
 ```bash
-streamlit run app.py
+streamlit run quantum_piab_app.py
 ```
 
-4. **Open in browser:**
-The app will automatically open at `http://localhost:8501`
-
-## Project Structure
-
-```
-quantum-piab-explorer/
-├── app.py                 # Main Streamlit application
-├── requirements.txt       # Python dependencies
-├── .gitignore            # Git ignore rules
-├── README.md             # This file
-└── streamlit_config.toml # Streamlit configuration (optional)
-```
-
-## Usage
-
-### 1. 📊 Wave Function & Probability
-- Visualize wave functions and probability densities
-- Compare multiple quantum states
-- Check normalization
-
-### 2. ⚡ Energy Levels
-- View energy level diagrams
-- See how energy scales with quantum number
-- Calculate energy ratios
-
-### 3. 🎯 Probability in Region
-- Calculate probability of finding particle in specific regions
-- Visual representation of integration regions
-- Integration error estimates
-
-### 4. 📐 Expectation Values
-- Position and momentum statistics
-- Heisenberg Uncertainty Principle verification
-- Energy expectation values
-
-### 5. ⏱️ Time Evolution
-- Stationary state analysis
-- Superposition state dynamics
-- Quantum interference patterns
-
-### 6. 🧪 Molecular Orbital Analysis
-- HOMO-LUMO gap calculations
-- UV-Vis absorption predictions
-- Conjugation vs. color relationships
-- Real molecular examples (ethylene, carotene, etc.)
-
-### 7. 📥 Data Export
-- Export quantum state data
-- Multiple format support (CSV, JSON, TXT)
-- Data statistics
-
-## Physical Constants
-
-The app uses **atomic units:**
-- ℏ (reduced Planck constant) = 1.0
-- m (particle mass) = 1.0
-- e (elementary charge) = 1.0
-
-## Theory
-
-### Particle in a Box
-
-The 1D particle in a box is a fundamental quantum mechanics problem where a particle is confined to move within a box of length L with infinite potential walls.
-
-**Key equations:**
-
-Energy eigenvalues:
-```
-E_n = n²π²ℏ² / (2mL²)
-```
-
-Wave functions:
-```
-ψ_n(x) = √(2/L) × sin(nπx/L)
-```
-
-Probability density:
-```
-|ψ_n(x)|² = (2/L) × sin²(nπx/L)
-```
-
-### Heisenberg Uncertainty Principle
-
-```
-Δx × Δp ≥ ℏ/2
-```
-
-### Molecular Orbital Connection
-
-For conjugated molecules (polyenes), the PIAB model approximates π-electron behavior:
-- Conjugation length → box length
-- π-electrons → particle in box
-- HOMO-LUMO gap → energy difference
-- Absorption wavelength → color of molecule
-
-## Deployment to Streamlit Community Cloud
-
-### Step 1: Push to GitHub
-
+4. **Run the Jupyter Notebook:**
 ```bash
-git init
-git add .
-git commit -m "Initial commit: Quantum PIAB Explorer"
-git branch -M main
-git remote add origin https://github.com/yourusername/quantum-piab-explorer.git
-git push -u origin main
+jupyter notebook Quantum_System_Solver_Project.ipynb
 ```
-
-### Step 2: Deploy on Streamlit Cloud
-
-1. Go to [Streamlit Community Cloud](https://share.streamlit.io)
-2. Click **"New app"**
-3. Select your GitHub repository
-4. Choose branch: `main`
-5. Set main file path: `app.py`
-6. Click **Deploy!**
-
-The app will be live at: `https://quantum-piab-explorer.streamlit.app`
-
-## System Requirements
-
-### Minimum
-- RAM: 512 MB
-- CPU: Single core
-- Python: 3.8+
-
-### Recommended
-- RAM: 2+ GB
-- CPU: Multi-core
-- Python: 3.10+
-
-## Performance Notes
-
-- Calculations run in real-time (<100ms for most operations)
-- Visualizations render instantly with matplotlib caching
-- Streamlit provides automatic refresh on code changes
-
-## Troubleshooting
-
-### Issue: "Unable to deploy" on Streamlit Cloud
-**Solution:** Make sure `requirements.txt` and `app.py` are in the repo root
-
-### Issue: Plots not displaying
-**Solution:** Clear cache: `streamlit cache clear`
-
-### Issue: Slow performance
-**Solution:** Reduce "Number of Points" slider to <1000
-
-### Issue: Import errors
-**Solution:** Install dependencies: `pip install -r requirements.txt`
-
-## Educational Use
-
-This tool is designed for:
-- 🎓 Undergraduate Quantum Mechanics courses
-- 📚 Physical Chemistry labs
-- 🔬 Research demonstrations
-- 🧠 Self-learning quantum theory
-
-## Contributing
-
-Contributions are welcome! Areas for enhancement:
-- 3D visualization (orbital isosurfaces)
-- 2D and 3D particle in a box
-- Harmonic oscillator comparison
-- Perturbation theory examples
-- Interactive potential well design
-
-## License
-
-MIT License - feel free to use and modify
-
-## Citation
-
-If you use this tool in research or teaching, please cite:
-```
-Quantum PIAB Explorer (2025)
-https://github.com/yourusername/quantum-piab-explorer
-```
-
-## Author
-
-Created for quantum mechanics education
-
-## Support
-
-For issues, questions, or suggestions:
-- GitHub Issues: [Report a bug](https://github.com/yourusername/quantum-piab-explorer/issues)
-- Email: your.email@example.com
 
 ---
 
-**Made with ❤️ for quantum learning**
+## 📖 Theoretical Foundation
 
-*"The particle in a box is where quantum mechanics begins to make sense." - Physicist*
+### **The Schrödinger Equation**
+Ĥψ(x) = Eψ(x) where Ĥ = -ℏ²/(2m) × d²/dx² + V(x)
+
+### **PIAB Potential**
+V(x) = 0 if 0 ≤ x ≤ L, otherwise ∞
+
+### **Exact Solutions**
+- **Energy:** E_n = n²π²ℏ²/(2mL²)
+- **Wave Function:** ψ_n(x) = √(2/L) × sin(nπx/L)
+- **Heisenberg Uncertainty:** Δx × Δp ≥ ℏ/2
+
+---
+
+## 📝 Project Structure
+
+```
+.
+├── quantum_piab_app.py      # Main Streamlit application
+├── quantum_piab_minimal.py  # Minimal version of the app
+├── Quantum_System_Solver_Project.ipynb # Detailed Jupyter Notebook
+├── requirements.txt         # Project dependencies
+├── streamlit_config.toml    # Streamlit configuration
+├── PROJECT_SUMMARY.md       # Detailed project summary
+├── FILE_LISTING.md          # Description of all project files
+├── QUICKREF.md              # Quick reference for quantum formulas
+└── README.md                # This file
+```
+
+---
+
+## 📄 License
+
+MIT License - feel free to use and modify
+
+**Attribution**: 
+- Created by Shamique Khan (25BAI10187) & Prachi Kamboj (25BAI10874)
+- Under guidance of Dr. Saurav Prasad
+- VIT Bhopal, 2025
